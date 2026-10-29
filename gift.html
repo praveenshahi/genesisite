@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-GB" data-theme="vellum">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recognise someone — Genesis Art Tech</title>
+<meta name="description" content="You saw who they became before they did. Give an invitation; they name their own transformation, in their own words.">
+<link rel="icon" href="assets/genesis-emblem-brass.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/site.css">
+<script src="scripts/site.js" defer></script>
+</head>
+<body>
+<a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__bar">
+    <a class="brand" href="index.html" aria-label="THE GENESIS, home"><img class="g-emblem--light" src="assets/genesis-emblem-light.png" alt=""><img class="g-emblem--ink" src="assets/genesis-emblem-ink.png" alt=""><span>The Genesis</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav"><span class="menu-btn__word">Menu</span><span class="menu-btn__lines" aria-hidden="true"></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="nav__link" href="manifesto.html">Manifesto</a>
+      <a class="nav__link" href="art-tech.html">Permanent Recognition</a>
+      <a class="nav__link" href="witness.html">The witness</a>
+      <a class="nav__link" href="gift.html" aria-current="page">Recognise someone</a>
+      <a class="g-btn g-btn--quiet" href="begin.html">Find your moment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap page-open">
+    <span class="g-eyebrow" data-reveal>Recognise someone</span>
+    <h1 class="t-hero" style="max-width: 13ch; --d: 150ms" data-reveal>You saw who they became before they did.</h1>
+    <p class="t-lede" style="max-width: 48ch; --d: 600ms" data-reveal>Give an invitation. They name their own transformation, in their own words. You never write it, and you only see it if they choose to share it.</p>
+  </section>
+
+  <!-- The invitation card -->
+  <section class="section--surface section--tall">
+    <div class="wrap split">
+      <div class="stack" style="--stack: var(--space-5)">
+        <span class="g-eyebrow" data-reveal>The invitation</span>
+        <h2 class="t-display-l" data-reveal>An invitation, printed on vellum.</h2>
+        <p class="t-body" data-reveal>They redeem it when they can see their own transformation, not before. Nothing about them is filled in for them.</p>
+      </div>
+      <div class="invite-card" data-reveal style="--d: 200ms">
+        <img src="assets/genesis-emblem-ink.png" alt="">
+        <p>We watched you become someone before you could see it yourself.</p>
+        <p>This is an invitation to recognise it, in your own words.</p>
+        <hr class="g-rule">
+        <a class="g-btn g-btn--quiet" href="begin.html">Redeem your invitation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- For firms -->
+  <section class="section--tall" id="firms">
+    <div class="wrap split">
+      <div class="stack" style="--stack: var(--space-5)">
+        <span class="g-eyebrow" data-reveal>For firms</span>
+        <h2 class="t-display-l" data-reveal>A founder gift that recognises the person, not the round.</h2>
+        <p class="t-body" data-reveal>For venture platform teams, accelerators and startup law firms. Invitation packs at $129 each, with one 45-minute group session, <em>The Moment That Made Me</em>.</p>
+        <div class="packs" data-reveal>
+          <span><strong>10</strong><em>Invitations</em></span>
+          <span><strong>25</strong><em>Invitations</em></span>
+          <span><strong>50</strong><em>Invitations</em></span>
+        </div>
+        <p class="t-caption" data-reveal>For year-end, order by late November.</p>
+      </div>
+      <form class="form" id="talk" data-reveal novalidate>
+        <h3 class="t-display-m">Talk to us</h3>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-firm">Firm</label><input id="f-firm" name="firm" autocomplete="organization" required></div>
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-pack">Pack size</label>
+          <select id="f-pack" name="pack"><option>10 invitations</option><option>25 invitations</option><option>50 invitations</option><option>Not sure yet</option></select>
+        </div>
+        <div><button class="g-btn g-btn--primary" type="submit">Talk to us</button></div>
+        <p class="form__status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__top">
+      <div>
+        <a class="brand" href="index.html" aria-label="THE GENESIS, home"><img class="g-emblem--light" src="assets/genesis-emblem-light.png" alt=""><img class="g-emblem--ink" src="assets/genesis-emblem-ink.png" alt=""><span>The Genesis</span></a>
+        <p class="site-foot__sig">Transformation, recognised.</p>
+      </div>
+      <nav class="site-foot__nav" aria-label="Footer">
+        <a href="manifesto.html">Manifesto</a>
+        <a href="deeper.html">Go deeper</a>
+        <a href="collection.html">The Founders Collection</a>
+        <a href="verify.html">Verify a recognition</a>
+      </nav>
+    </div>
+    <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
+  </div>
+</footer>
+<script>
+  // Prototype: the form has no endpoint yet. It checks the fields and says so plainly.
+  document.getElementById('talk').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = e.target, status = form.querySelector('.form__status');
+    var missing = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (f) { return !f.checkValidity(); });
+    if (missing.length) {
+      status.textContent = 'Add your ' + missing.map(function (f) { return form.querySelector('label[for="' + f.id + '"]').textContent.toLowerCase(); }).join(', ') + ' so we can reply.';
+      missing[0].focus();
+      return;
+    }
+    status.textContent = 'This form isn’t connected yet. Nothing was sent.';
+  });
+</script>
+</body>
+</html>

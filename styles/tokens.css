@@ -1,0 +1,78 @@
+/* THE GENESIS — generated from tokens.json */
+:root, [data-theme="night"] {
+  --ground: #050608;
+  --surface: #0B0D14;
+  --surface-raised: #11151E;
+  --ink: #F3EFE7;
+  --ink-muted: #B6B0A7;
+  --ink-faint: #8E9AA8;
+  --brass: #D4A657;
+  --brass-fill: #D4A657;
+  --on-brass: #141210;
+  --hairline: #262A33;
+  --hairline-strong: #636A77;
+  --focus: var(--brass);
+  --witness-valid: #B9CF95;
+  --witness-pending: #B6B0A7;
+  --art-ground: #0A0D14;
+  --art-verdant: #B9CF95;
+  --art-cyan: #5FB4C9;
+  --art-violet: #8C7FD6;
+  --shadow-art: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+[data-theme="vellum"] {
+  --ground: #F6F1E7;
+  --surface: #FFFFFF;
+  --surface-raised: #EFE7D8;
+  --ink: #141210;
+  --ink-muted: #5E574D;
+  --ink-faint: #6B645A;
+  --brass: #7A5C26;
+  --brass-fill: #B88A42;
+  --on-brass: #141210;
+  --hairline: #E3D9C6;
+  --hairline-strong: #877758;
+  --focus: var(--brass);
+  --witness-valid: #2F6B50;
+  --witness-pending: #5E574D;
+  --art-ground: #0A0D14;
+  --art-verdant: #B9CF95;
+  --art-cyan: #5FB4C9;
+  --art-violet: #8C7FD6;
+  --shadow-art: 0 24px 60px rgba(20, 18, 16, 0.22);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 160px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+  --measure-turn: 18ch;
+  --measure-text: 62ch;
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-serif: Lora, Georgia, "Times New Roman", serif;
+  --font-label: Jost, "Futura", "Century Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+.turn { font-family: var(--font-display); font-size: 64px; line-height: 68px; font-weight: 300; letter-spacing: -0.01em; }
+.display-l { font-family: var(--font-display); font-size: 48px; line-height: 54px; font-weight: 400; }
+.display-m { font-family: var(--font-display); font-size: 34px; line-height: 40px; font-weight: 400; }
+.display-italic { font-family: var(--font-display); font-size: 28px; line-height: 36px; font-weight: 400; font-style: italic; }
+.wordmark { font-family: var(--font-display); font-size: 28px; line-height: 32px; font-weight: 500; letter-spacing: 0.32em; }
+.lede { font-family: var(--font-serif); font-size: 21px; line-height: 33px; font-weight: 400; font-style: italic; }
+.body { font-family: var(--font-serif); font-size: 18px; line-height: 30px; font-weight: 400; }
+.body-s { font-family: var(--font-serif); font-size: 15px; line-height: 24px; font-weight: 400; }
+.eyebrow { font-family: var(--font-label); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.24em; }
+.button { font-family: var(--font-label); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.14em; }
+.caption { font-family: var(--font-label); font-size: 13px; line-height: 20px; font-weight: 400; letter-spacing: 0.02em; }
+.record { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }

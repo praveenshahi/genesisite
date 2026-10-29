@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-GB" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find your moment — THE GENESIS</title>
+<meta name="description" content="This isn't about what you built. It's about who you became. Four small choices, about five minutes.">
+<link rel="icon" href="assets/genesis-emblem-brass.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/finder.css">
+<script src="scripts/site.js" defer></script>
+<script src="scripts/endless-sketch.js" defer></script>
+<script src="scripts/finder.js" defer></script>
+</head>
+<body class="finder">
+
+<header class="finder-head wrap">
+  <a class="brand" href="index.html" aria-label="THE GENESIS, home"><img class="g-emblem--light" src="assets/genesis-emblem-light.png" alt=""><img class="g-emblem--ink" src="assets/genesis-emblem-ink.png" alt=""><span>The Genesis</span></a>
+  <div class="finder-progress" aria-hidden="true"><span></span></div>
+  <a class="finder-leave" href="index.html">Leave</a>
+</header>
+
+<main id="main" class="finder-main wrap">
+  <form id="finder" novalidate>
+
+    <!-- 0. Threshold -->
+    <section class="screen" data-screen="threshold" data-ground="night">
+      <h1 class="t-turn screen__title" tabindex="-1">This isn't about what you built. It's about who you became.</h1>
+      <div class="screen__actions">
+        <button type="button" class="g-btn g-btn--primary" data-next>Begin</button>
+        <span class="g-btn__note">Four small choices. About five minutes. Nothing is saved until you choose.</span>
+      </div>
+    </section>
+
+    <!-- 1. What ended -->
+    <section class="screen" data-screen="ended" data-ground="vellum" hidden>
+      <span class="g-eyebrow">What ended?</span>
+      <h2 class="t-display-m screen__title" tabindex="-1">Something had to end. What was it?</h2>
+      <div class="g-chips" role="group" aria-label="What ended" data-field="ended">
+        <button type="button" class="g-chip" aria-pressed="false">A role I held</button>
+        <button type="button" class="g-chip" aria-pressed="false">A belief about myself</button>
+        <button type="button" class="g-chip" aria-pressed="false">A place I called home</button>
+        <button type="button" class="g-chip" aria-pressed="false">A relationship</button>
+        <button type="button" class="g-chip" aria-pressed="false">A way of working</button>
+        <button type="button" class="g-chip" aria-pressed="false" data-other>Something else</button>
+      </div>
+      <div class="field screen__other" hidden><label for="ended-other">In a few words</label><input id="ended-other" name="ended-other" maxlength="60" autocomplete="off"></div>
+      <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next disabled>Continue</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
+    </section>
+
+    <!-- 2. The in-between -->
+    <section class="screen" data-screen="between" data-ground="vellum" hidden>
+      <span class="g-eyebrow">The in-between</span>
+      <h2 class="t-display-m screen__title" tabindex="-1">How long were you no longer who you were, and not yet who you'd be?</h2>
+      <div class="g-chips" role="group" aria-label="How long the in-between lasted" data-field="between">
+        <button type="button" class="g-chip" aria-pressed="false">Days</button>
+        <button type="button" class="g-chip" aria-pressed="false">Weeks</button>
+        <button type="button" class="g-chip" aria-pressed="false">Months</button>
+        <button type="button" class="g-chip" aria-pressed="false">Years</button>
+        <button type="button" class="g-chip" aria-pressed="false">I'm not sure</button>
+      </div>
+      <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next>Continue</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
+      <p class="t-caption screen__hint">Optional. Leave it if it doesn't fit.</p>
+    </section>
+
+    <!-- 3. What emerged -->
+    <section class="screen" data-screen="emerged" data-ground="vellum" hidden>
+      <span class="g-eyebrow">What emerged?</span>
+      <h2 class="t-display-m screen__title" tabindex="-1">And afterwards, what was there that wasn't before?</h2>
+      <div class="g-chips" role="group" aria-label="What emerged" data-field="emerged">
+        <button type="button" class="g-chip" aria-pressed="false">A truer sense of myself</button>
+        <button type="button" class="g-chip" aria-pressed="false">Work that is mine</button>
+        <button type="button" class="g-chip" aria-pressed="false">A decision I stand by</button>
+        <button type="button" class="g-chip" aria-pressed="false">A new kind of calm</button>
+        <button type="button" class="g-chip" aria-pressed="false">The courage to begin</button>
+        <button type="button" class="g-chip" aria-pressed="false" data-other>Something else</button>
+      </div>
+      <div class="field screen__other" hidden><label for="emerged-other">In a few words</label><input id="emerged-other" name="emerged-other" maxlength="60" autocomplete="off"></div>
+      <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next disabled>Continue</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
+    </section>
+
+    <!-- 4. When did it end -->
+    <section class="screen" data-screen="date" data-ground="vellum" hidden>
+      <span class="g-eyebrow">When did it end?</span>
+      <h2 class="t-display-m screen__title" tabindex="-1">The day the old form ended.</h2>
+      <div class="field screen__field"><label for="ended-on">The day it ended</label><input id="ended-on" name="ended-on" type="date" required></div>
+      <p class="field__hint">Your closest guess is fine. This date seeds your artwork.</p>
+      <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next disabled>Continue</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
+    </section>
+
+    <!-- 5. In your own words -->
+    <section class="screen" data-screen="words" data-ground="vellum" hidden>
+      <span class="g-eyebrow">In your own words</span>
+      <h2 class="t-display-m screen__title" tabindex="-1">Name it. We'll never edit what you write.</h2>
+      <div class="field screen__field"><label for="title">A title</label><input id="title" name="title" maxlength="80" autocomplete="off" placeholder="The day I…" required></div>
+      <div class="field screen__field"><label for="story">What ended, and what emerged <span class="t-faint">(optional)</span></label><textarea id="story" name="story" maxlength="1200"></textarea><p class="field__hint"><span data-count>0</span> of 1,200 characters</p></div>
+      <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next disabled>Continue</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
+    </section>
+
+    <!-- 6. Private or shared -->
+    <section class="screen" data-screen="share" data-ground="vellum" hidden>
+      <span class="g-eyebrow">Private or shared</span>
+      <h2 class="t-display-m screen__title" tabindex="-1">What should others be able to see?</h2>
+      <div class="g-chips g-chips--stack" role="group" aria-label="What others can see" data-field="share">
+        <button type="button" class="g-chip" aria-pressed="false" data-value="art">Art only<span>The form is seen. The story stays yours.</span></button>
+        <button type="button" class="g-chip" aria-pressed="false" data-value="title">Art and title<span>Your title and date beside the piece.</span></button>
+        <button type="button" class="g-chip" aria-pressed="false" data-value="story">The full story<span>Your words, public on your record.</span></button>
+      </div>
+      <p class="field__hint">A private story is encrypted in your browser. Only you hold the key, and we can't recover it.</p>
+      <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next disabled>Recognise it</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
+    </section>
+
+    <!-- 7. The pause -->
+    <section class="screen screen--pause" data-screen="pause" data-ground="night" hidden aria-live="polite">
+      <div class="pause-line" aria-hidden="true"></div>
+      <p class="t-caption pause-word">Recognising.</p>
+    </section>
+
+    <!-- 8. The reveal -->
+    <section class="screen screen--reveal" data-screen="reveal" data-ground="night" hidden>
+      <figure class="g-art reveal-art">
+        <span class="g-art__frame"><canvas id="sketch" role="img" aria-label="An artwork drawn from your answers: fine filaments in pale green, cyan and violet folding into a rotated square around a small central ring, on a dark ground."></canvas></span>
+      </figure>
+      <div class="reveal-text">
+        <h2 class="t-display-l screen__title" tabindex="-1" data-out="title"></h2>
+        <p class="reveal-date" data-out="date"></p>
+        <p class="t-caption reveal-proto">Prototype preview, drawn in your browser from your answers.</p>
+        <div class="screen__actions"><button type="button" class="g-btn g-btn--quiet" data-next>Continue</button></div>
+      </div>
+    </section>
+
+    <!-- 9. The witness and the price -->
+    <section class="screen" data-screen="witness" data-ground="night" hidden>
+      <span class="g-eyebrow">The witness</span>
+      <h2 class="t-display-l screen__title" tabindex="-1">A witness that can't be changed.</h2>
+      <p class="t-body">Genesis will record that on this date you declared this transformation, in these words, and that nothing has changed since. It doesn't judge your story. It attests.</p>
+      <div class="g-wstatus" role="list" style="margin-top: var(--space-6)">
+        <span class="g-wstatus__item g-wstatus__item--pending" role="listitem">Signed<span class="g-wstatus__sub">when you recognise it</span></span>
+        <span class="g-wstatus__item g-wstatus__item--pending" role="listitem">Anchored<span class="g-wstatus__sub">to Bitcoin, within a day</span></span>
+        <span class="g-wstatus__item g-wstatus__item--pending" role="listitem">Stored<span class="g-wstatus__sub">on Arweave</span></span>
+      </div>
+      <div class="price">
+        <strong>$129</strong>
+        <span>One founding price. No discounts, no tiers.</span>
+      </div>
+      <div class="screen__actions">
+        <button type="button" class="g-btn g-btn--primary" data-next>Recognise it</button>
+        <a class="g-btn g-btn--link" href="art-tech.html#receive">What you receive</a>
+      </div>
+      <p class="t-caption screen__hint">Prototype: payment isn't connected yet.</p>
+    </section>
+
+    <!-- 10. Recognised. -->
+    <section class="screen screen--done" data-screen="done" data-ground="night" hidden>
+      <figure class="g-art done-art"><span class="g-art__frame"><canvas id="done-sketch" aria-hidden="true"></canvas></span></figure>
+      <h2 class="t-hero screen__title" tabindex="-1">Recognised.</h2>
+      <p class="done-title" data-out="title"></p>
+      <p class="reveal-date" data-out="date"></p>
+      <div class="done-share">
+        <span class="g-eyebrow">If you want to share it</span>
+        <div class="g-chips" role="group" aria-label="Sharing level">
+          <button type="button" class="g-chip" aria-pressed="false">Art only</button>
+          <button type="button" class="g-chip" aria-pressed="false">Art and title</button>
+          <button type="button" class="g-chip" aria-pressed="false">The full story</button>
+        </div>
+        <p class="field__hint">Nothing posts automatically.</p>
+      </div>
+      <div class="actions" style="justify-content: center">
+        <a class="g-btn g-btn--quiet" href="verify.html">See the record</a>
+        <a class="g-btn g-btn--quiet" href="gift.html">Recognise someone you watched change</a>
+      </div>
+    </section>
+
+  </form>
+</main>
+</body>
+</html>

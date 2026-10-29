@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-GB" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The witness — Genesis Art Tech</title>
+<meta name="description" content="A witness that can't be changed. It attests. It never judges. What each part of the record proves, and what it doesn't.">
+<link rel="icon" href="assets/genesis-emblem-brass.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/site.css">
+<script src="scripts/site.js" defer></script>
+</head>
+<body>
+<a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__bar">
+    <a class="brand" href="index.html" aria-label="THE GENESIS, home"><img class="g-emblem--light" src="assets/genesis-emblem-light.png" alt=""><img class="g-emblem--ink" src="assets/genesis-emblem-ink.png" alt=""><span>The Genesis</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav"><span class="menu-btn__word">Menu</span><span class="menu-btn__lines" aria-hidden="true"></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="nav__link" href="manifesto.html">Manifesto</a>
+      <a class="nav__link" href="art-tech.html">Permanent Recognition</a>
+      <a class="nav__link" href="witness.html" aria-current="page">The witness</a>
+      <a class="nav__link" href="gift.html">Recognise someone</a>
+      <a class="g-btn g-btn--quiet" href="begin.html">Find your moment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap page-open">
+    <span class="g-eyebrow" data-reveal>The witness</span>
+    <h1 class="t-hero" style="max-width: 12ch; --d: 150ms" data-reveal>A witness that can't be changed.</h1>
+    <p class="t-lede" data-reveal style="--d: 600ms">It attests. It never judges.</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom: var(--space-10)">
+    <div class="does" data-reveal>
+      <div><h2>What it does</h2><p>It records that on this date you declared this transformation, in these words, and that nothing has changed since.</p></div>
+      <div><h2>What it doesn't do</h2><p>It doesn't verify your story, interpret it or judge it. That's what a witness is for.</p></div>
+    </div>
+  </section>
+
+  <section class="section--surface section--tall">
+    <div class="wrap">
+      <h2 class="t-display-l" style="max-width: 18ch; margin-bottom: var(--space-8)" data-reveal>Four parts, each in plain words.</h2>
+      <div class="proofs">
+        <div class="proof" data-reveal>
+          <div class="proof__name"><span class="g-wstatus__item">Signed</span><span class="g-wstatus__sub">Ed25519</span></div>
+          <div>
+            <p class="proof__plain">Genesis signs your record with its public key.</p>
+            <dl class="proof__facts"><div><dt>What it proves</dt><dd>The record was issued by Genesis and hasn't been altered.</dd></div><div><dt>What it doesn't</dt><dd>That the story is true.</dd></div></dl>
+          </div>
+        </div>
+        <div class="proof" data-reveal>
+          <div class="proof__name"><span class="g-wstatus__item">Anchored</span><span class="g-wstatus__sub">Bitcoin · OpenTimestamps</span></div>
+          <div>
+            <p class="proof__plain">A fingerprint of your record is anchored to the Bitcoin blockchain with OpenTimestamps.</p>
+            <dl class="proof__facts"><div><dt>What it proves</dt><dd>The record existed by that point in time.</dd></div><div><dt>What it doesn't</dt><dd>That the event happened on that date.</dd></div></dl>
+          </div>
+        </div>
+        <div class="proof" data-reveal>
+          <div class="proof__name"><span class="g-wstatus__item">Stored</span><span class="g-wstatus__sub">Arweave</span></div>
+          <div>
+            <p class="proof__plain">Your record, public story and image are stored on Arweave, each at a public address.</p>
+            <dl class="proof__facts"><div><dt>What it proves</dt><dd>Each stored item is retrievable at its address.</dd></div><div><dt>What it doesn't</dt><dd>Availability of every file forever; check each one.</dd></div></dl>
+          </div>
+        </div>
+        <div class="proof" data-reveal>
+          <div class="proof__name"><span class="g-wstatus__item">Private</span><span class="g-wstatus__sub">AES-256-GCM</span></div>
+          <div>
+            <p class="proof__plain">A private story is encrypted in your browser.</p>
+            <dl class="proof__facts"><div><dt>What it proves</dt><dd>Only the key-holder can read it.</dd></div><div><dt>What it doesn't</dt><dd>Recovery: we can't restore a lost key.</dd></div></dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tall">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--space-7);">
+      <p class="t-display-l" style="max-width: 20ch" data-reveal>Every recognition has a public record you can check.</p>
+      <div class="actions" data-reveal>
+        <a class="g-btn g-btn--quiet" href="verify.html">Verify a recognition</a>
+        <a class="g-btn g-btn--primary" href="begin.html">Find your moment</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__top">
+      <div>
+        <a class="brand" href="index.html" aria-label="THE GENESIS, home"><img class="g-emblem--light" src="assets/genesis-emblem-light.png" alt=""><img class="g-emblem--ink" src="assets/genesis-emblem-ink.png" alt=""><span>The Genesis</span></a>
+        <p class="site-foot__sig">Transformation, recognised.</p>
+      </div>
+      <nav class="site-foot__nav" aria-label="Footer">
+        <a href="manifesto.html">Manifesto</a>
+        <a href="deeper.html">Go deeper</a>
+        <a href="collection.html">The Founders Collection</a>
+        <a href="verify.html">Verify a recognition</a>
+      </nav>
+    </div>
+    <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
+  </div>
+</footer>
+</body>
+</html>
