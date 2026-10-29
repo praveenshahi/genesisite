@@ -278,3 +278,54 @@ A Layer 2 concept card on the *Go deeper* page: one idea, two or three sentences
   </article>
 </div>
 ```
+
+---
+
+# The timeless set
+
+The old instruments of witness, rebuilt in code. Styles live in `styles/ornament.css`; drawing in `scripts/sky.js` (Astrolabe, StarField), `scripts/seal.js` (Seal) and `scripts/site.js` (Glyph sprite, InscriptionDate). Every page loads `seed.js`, `sky.js` and `seal.js` after `site.js`.
+
+## Astrolabe
+
+The rite's instrument: a brass line drawing of a limb (degree ticks, Roman hours), a lapis plate, a turning rete with star pointers and a six-node orbit, an alidade that follows the scroll, and the emblem PNG at its hub.
+
+**Markup.** `<div class="astrolabe" data-astrolabe></div>`. `sky.js` draws it.
+
+**Do** use it only on the home hero and the Moment Finder threshold, on night. **Don't** put text over it, or use more than one per screen.
+
+## StarField
+
+A fixed, seeded star scatter with faint six-star constellations, injected on every page and hidden on vellum. For a contained chart, add `data-stars="seed"` to a positioned box (it gets a `.starchart` canvas behind its content).
+
+## Seal
+
+The witness's instrument: rings, the ring text *प्रत्यभिज्ञा · RECOGNITIO · ID*, a signature ring of ticks and six nodes, all derived from a hash of the ID. Brass on night, wax rubric on vellum (`seal-ink`).
+
+**Markup.** `<div data-seal="ID"></div>`; add `data-seal-size="small"` for a 56px mark without ring text. Call `Genesis.seal(el, id)` for dynamic seals and add `.seal--press` once to press it in.
+
+**Do** generate it from the real record ID on verify. **Don't** call it proof: it is the visual form of the signature, not the signature.
+
+## Glyph
+
+One line glyph per idea, 24px grid: `threshold`, `seed`, `seal`, `ending`, `between`, `after`, `silent`, `word`, `shared`, `thread`.
+
+**Markup.** `<svg class="glyph" aria-hidden="true"><use href="#g-seed"/></svg>`; `.glyph--l` for 44px. Pair with an eyebrow in `.glyph-head`.
+
+## InscriptionDate
+
+A date carved in Roman numerals beside the plain date. **Markup.** `<span data-inscribe="2025-05-05">5 May 2025</span>`, or `Genesis.inscribeInto(el, iso)`. Never show the Roman form alone.
+
+## Folio, Initial, Sidenote
+
+The manuscript layout for vellum reading pages. `.folio` is a two-column grid (text and margin); each paragraph with a note goes in a `.folio__row` with an `<aside class="sidenote">` that starts with `<span class="ref">a</span>`. Mark the reference in the text with `<sup class="ref" aria-hidden="true">a</sup>`. `.has-initial` makes the paragraph's first letter a rubric initial.
+
+## Ornamental rules, mat and thread
+
+- `.section--rule` draws a limb scale along the top of a section; `.orule` (with an empty `<span>`) is the orbit divider.
+- `.mat` wraps an `.g-art__frame` in a graduated frame; it never touches the artwork.
+- `.knot` inside a positioned section lights up on the home page's brass thread as it scrolls past.
+- `.running-head` sits under the header of inner pages: page name and Roman folio number.
+
+## Colophon
+
+The footer's closing lines: what the site is set in and how every recognition is witnessed, with the year in Roman numerals. Same markup on every page.

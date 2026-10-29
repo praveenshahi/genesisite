@@ -8,11 +8,15 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 </head>
 <body>
 <a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
@@ -30,67 +34,69 @@
     </nav>
   </div>
 </header>
+<div class="wrap running-head" aria-hidden="true"><span>Go deeper</span><span class="running-head__rule"></span><span>Folio II</span></div>
 
 <main id="main">
   <section class="wrap page-open" style="min-height: 0">
     <span class="g-eyebrow" data-reveal>Go deeper</span>
     <h1 class="t-hero" style="max-width: 11ch" data-reveal>For the curious and the sceptical.</h1>
+    <p class="t-inscription t-faint" style="margin-top: var(--space-5); font-size: 14px" data-reveal>A commonplace book in eight leaves</p>
     <p class="t-lede" data-reveal style="--d: 300ms">One idea, one source each.</p>
   </section>
 
   <section class="wrap" style="padding-bottom: var(--space-9)">
     <div class="deeper-grid">
       <article class="g-deeper" id="civilisation" data-reveal>
-        <div class="g-deeper__num">01</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-thread"/></svg><span>Folio I</span></div>
         <h2 class="g-deeper__title">What every civilisation knew</h2>
         <p class="g-deeper__body">Many traditions marked a second birth: the sacred thread of the twice-born, worn next to the skin, is one. Anthropologists call these rites of passage. Victor Turner noticed that modern life swapped them for “liminoid” experiences we choose alone, and rarely mark.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: Dvija; Victor Turner</p>
       </article>
       <article class="g-deeper" id="ending" data-reveal style="--d: 120ms">
-        <div class="g-deeper__num">02</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-ending"/></svg><span>Folio II</span></div>
         <h2 class="g-deeper__title">Why it begins with an ending</h2>
         <p class="g-deeper__body">William Bridges observed that every transition starts not with a beginning but with letting go. The new can't begin until something of the old has been released.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: William Bridges, <cite>What Is Transition?</cite></p>
       </article>
       <article class="g-deeper" id="in-between" data-reveal>
-        <div class="g-deeper__num">03</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-between"/></svg><span>Folio III</span></div>
         <h2 class="g-deeper__title">The in-between</h2>
         <p class="g-deeper__body">Arnold van Gennep described a rite of passage in three parts: separation, transition, return. Turner called the middle “liminal”: no longer, not yet. It's where the change actually happens.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: Arnold van Gennep; Victor Turner</p>
       </article>
       <article class="g-deeper" id="afterwards" data-reveal style="--d: 120ms">
-        <div class="g-deeper__num">04</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-after"/></svg><span>Folio IV</span></div>
         <h2 class="g-deeper__title">Why you can't see it until after</h2>
         <p class="g-deeper__body">The philosopher L. A. Paul writes of transformative experiences: changes you can't understand in advance, only from the other side. The Greek <em>metanoia</em>, a change of mind, first carried the sense of afterthought.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: L. A. Paul; Etymonline</p>
       </article>
       <article class="g-deeper" id="silent" data-reveal>
-        <div class="g-deeper__num">05</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-silent"/></svg><span>Folio V</span></div>
         <h2 class="g-deeper__title">The silent transformations</h2>
         <p class="g-deeper__body">William Miller and Janet C'de Baca studied people whose lives turned and stayed turned. Many of those who changed most had told almost no one.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: Miller &amp; C'de Baca</p>
       </article>
       <article class="g-deeper" id="one-word" data-reveal style="--d: 120ms">
-        <div class="g-deeper__num">06</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-word"/></svg><span>Folio VI</span></div>
         <h2 class="g-deeper__title">Two traditions, one word</h2>
         <p class="g-deeper__body">In Sanskrit, <em lang="sa-Latn">pratyabhijñā</em>; in Latin, <em lang="la">re-cognoscere</em>. Both mean to know again. Kashmir Shaiva philosophy holds that the deepest realisation is recognising what was already true.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: Internet Encyclopedia of Philosophy, Kashmiri Shaivism</p>
       </article>
       <article class="g-deeper" id="generative" data-reveal>
-        <div class="g-deeper__num">07</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-seed"/></svg><span>Folio VII</span></div>
         <h2 class="g-deeper__title">Why generative art</h2>
         <p class="g-deeper__body">Sāṃkhya holds that the oil is already in the seed. A generative piece works the same way: a seed unfolds, through a process, into a form no one could see in advance.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
         <p class="g-deeper__src">Source: Sāṃkhya</p>
       </article>
       <article class="g-deeper" id="shared" data-reveal style="--d: 120ms">
-        <div class="g-deeper__num">08</div>
+        <div class="g-deeper__num"><svg class="glyph" aria-hidden="true"><use href="#g-shared"/></svg><span>Folio VIII</span></div>
         <h2 class="g-deeper__title">Shared without being exposed</h2>
         <p class="g-deeper__body">Abhinavagupta wrote of <em lang="sa-Latn">sādhāraṇīkaraṇa</em>: art lets a feeling be shared without belonging to one person's private history. The form can be seen while the story stays yours.</p>
         <p class="g-deeper__close">Only you can name yours.</p>
@@ -123,6 +129,12 @@
         <a href="collection.html">The Founders Collection</a>
         <a href="verify.html">Verify a recognition</a>
       </nav>
+    </div>
+    <div class="orule" aria-hidden="true"><span></span></div>
+    <div class="colophon">
+      <p class="colophon__head inscription">Colophon</p>
+      <p class="colophon__text">Set in Cormorant, Lora and Jost, with Tiro Devanagari for the Sanskrit. Every recognition is signed by Genesis, anchored to Bitcoin and stored on Arweave.</p>
+      <p class="colophon__year inscription">Anno MMXXVI</p>
     </div>
     <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
   </div>

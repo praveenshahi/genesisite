@@ -8,11 +8,15 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 </head>
 <body>
 <a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
@@ -30,6 +34,7 @@
     </nav>
   </div>
 </header>
+<div class="wrap running-head" aria-hidden="true"><span>Permanent Recognition</span><span class="running-head__rule"></span><span>Folio III</span></div>
 
 <main id="main">
 
@@ -45,7 +50,7 @@
   <!-- 1. Your words -->
   <section class="section--rule section--tall">
     <div class="wrap grid-12">
-      <div class="col-label" data-reveal><span class="g-eyebrow">Your words</span></div>
+      <div class="col-label glyph-head" data-reveal><svg class="glyph" aria-hidden="true"><use href="#g-word"/></svg><span class="g-eyebrow">Your words</span></div>
       <div class="col-main-narrow stack" style="--stack: var(--space-5)">
         <h2 class="t-display-l" data-reveal>Only you can name it.</h2>
         <p class="t-body" data-reveal style="--d: 200ms">You choose what ended, what emerged and the day it ended. You write it in your own words. We never write it for you, and we never judge it.</p>
@@ -57,13 +62,23 @@
   <section class="section--surface section--tall">
     <div class="wrap split">
       <figure class="g-art" data-reveal>
-        <span class="g-art__frame"><img src="assets/endless-2620050a.jpg" width="1400" height="1400" loading="lazy" alt="Endless artwork for Recognition 2620050a: dense pale-green, cyan and violet filaments forming a rotated square around a small central ring"></span>
+        <span class="mat"><span class="g-art__frame"><img src="assets/endless-2620050a.jpg" width="1400" height="1400" loading="lazy" alt="Endless artwork for Recognition 2620050a: dense pale-green, cyan and violet filaments forming a rotated square around a small central ring"></span></span>
         <figcaption class="g-art__cap"><span class="g-art__title">The day I took the risk that changed my life</span>5 May 2025 · Endless · Open Collection</figcaption>
       </figure>
       <div class="stack" style="--stack: var(--space-5)">
-        <span class="g-eyebrow" data-reveal>The mark</span>
+        <div class="glyph-head" data-reveal><svg class="glyph" aria-hidden="true"><use href="#g-seed"/></svg><span class="g-eyebrow">The mark</span></div>
         <h2 class="t-display-l" data-reveal>A seed becomes a form.</h2>
         <p class="t-body" data-reveal>The Genesis engine, <em>Endless</em>, makes an artwork from the day your old form ended, your words and a unique seed. It isn't a picture of what happened. It's made the way transformation happens: from a seed, through a process, into a form no one could see in advance.</p>
+        <figure class="process" data-reveal aria-label="Seed, then process, then form">
+          <svg viewBox="0 0 360 96" aria-hidden="true">
+            <g class="process__seed"><circle cx="40" cy="44" r="4"/><circle cx="40" cy="44" r="14" class="ring"/></g>
+            <path class="process__arrow" d="M70 44H108M102 39l6 5-6 5"/>
+            <g class="process__flow"><path d="M140 44c10-30 30-30 40 0s30 30 40 0"/><path d="M140 44c10 24 30 24 40 0s30-24 40 0" class="c2"/><path d="M140 44c14-16 26-16 40 0s26 16 40 0" class="c3"/></g>
+            <path class="process__arrow" d="M244 44H282M276 39l6 5-6 5"/>
+            <g class="process__form" transform="translate(326 44) rotate(22)"><rect x="-22" y="-22" width="44" height="44" rx="6"/><rect x="-16" y="-16" width="32" height="32" rx="10" class="c2"/><circle r="4" class="c3"/></g>
+          </svg>
+          <figcaption><span>Seed</span><span>Process</span><span>Form</span></figcaption>
+        </figure>
         <p class="t-caption" data-reveal>Display and print files: PNG, SVG, PDF.</p>
       </div>
     </div>
@@ -72,7 +87,7 @@
   <!-- 3. The witness -->
   <section class="section--tall">
     <div class="wrap grid-12">
-      <div class="col-label" data-reveal><span class="g-eyebrow">The witness</span></div>
+      <div class="col-label glyph-head" data-reveal><svg class="glyph" aria-hidden="true"><use href="#g-seal"/></svg><span class="g-eyebrow">The witness</span></div>
       <div class="col-main-narrow stack" style="--stack: var(--space-5)">
         <div class="g-wstatus" role="list" data-reveal>
           <span class="g-wstatus__item" role="listitem">Signed<span class="g-wstatus__sub">by Genesis</span></span>
@@ -89,7 +104,7 @@
   <!-- 4. The Founders Collection -->
   <section class="section--rule section--tall">
     <div class="wrap grid-12">
-      <div class="col-label" data-reveal><span class="g-eyebrow">The Founders Collection</span></div>
+      <div class="col-label glyph-head" data-reveal><svg class="glyph" aria-hidden="true"><use href="#g-shared"/></svg><span class="g-eyebrow">The Founders Collection</span></div>
       <div class="col-main-narrow stack" style="--stack: var(--space-5)">
         <h2 class="t-display-l" data-reveal>One of the first 2,212.</h2>
         <p class="t-body" data-reveal>The Founders Collection is the first community of people whose transformation has been witnessed. Your piece is personal. Together, the pieces make the idea visible.</p>
@@ -101,7 +116,7 @@
   <!-- 5. What you receive -->
   <section class="section--tall" id="receive">
     <div class="wrap grid-12">
-      <div class="col-label" data-reveal><span class="g-eyebrow">What you receive</span></div>
+      <div class="col-label glyph-head" data-reveal><svg class="glyph" aria-hidden="true"><use href="#g-thread"/></svg><span class="g-eyebrow">What you receive</span></div>
       <div class="col-main-narrow">
         <div class="receive" data-reveal>
           <ul>
@@ -111,7 +126,7 @@
             <li>Display and print-ready files, and your certificate</li>
             <li>Your place in the Founders Collection</li>
           </ul>
-          <div class="price">
+          <div class="price price--inscribed">
             <strong>$129</strong>
             <span>One founding price. No discounts, no tiers.</span>
           </div>
@@ -126,7 +141,7 @@
   <!-- 6. Questions -->
   <section class="section--rule section--tall">
     <div class="wrap grid-12">
-      <div class="col-label" data-reveal><span class="g-eyebrow">Questions</span></div>
+      <div class="col-label glyph-head" data-reveal><svg class="glyph" aria-hidden="true"><use href="#g-silent"/></svg><span class="g-eyebrow">Questions</span></div>
       <div class="col-main-narrow faq" data-reveal>
         <details><summary>Is this an NFT?</summary><p>No. There's no token and nothing to trade. You own your artwork files and your record.</p></details>
         <details><summary>Does the blockchain prove my story?</summary><p>No. It proves that on this date you declared it, and that the record hasn't changed since. The story is yours.</p></details>
@@ -155,6 +170,12 @@
         <a href="collection.html">The Founders Collection</a>
         <a href="verify.html">Verify a recognition</a>
       </nav>
+    </div>
+    <div class="orule" aria-hidden="true"><span></span></div>
+    <div class="colophon">
+      <p class="colophon__head inscription">Colophon</p>
+      <p class="colophon__text">Set in Cormorant, Lora and Jost, with Tiro Devanagari for the Sanskrit. Every recognition is signed by Genesis, anchored to Bitcoin and stored on Arweave.</p>
+      <p class="colophon__year inscription">Anno MMXXVI</p>
     </div>
     <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
   </div>

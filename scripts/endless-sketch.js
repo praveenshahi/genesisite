@@ -1,27 +1,7 @@
 /* A browser sketch in the manner of the Endless engine, seeded from a string.
    Prototype only: the real artwork is made by the Genesis engine. Colours come from tokens.css. */
 (function () {
-  function hash(str) {
-    var h = 1779033703 ^ str.length;
-    for (var i = 0; i < str.length; i++) {
-      h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
-      h = (h << 13) | (h >>> 19);
-    }
-    h = Math.imul(h ^ (h >>> 16), 2246822507);
-    h = Math.imul(h ^ (h >>> 13), 3266489909);
-    return (h ^= h >>> 16) >>> 0;
-  }
-  function mulberry32(a) {
-    return function () {
-      a |= 0; a = (a + 0x6D2B79F5) | 0;
-      var t = Math.imul(a ^ (a >>> 15), 1 | a);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-  function token(name) {
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-  }
+  var token = window.GenesisSeed.token;
 
   function draw(canvas, seed, opts) {
     opts = opts || {};
@@ -30,7 +10,7 @@
     var S = Math.round(css * dpr);
     canvas.width = S; canvas.height = S;
     var ctx = canvas.getContext('2d');
-    var rand = mulberry32(hash(seed));
+    var rand = window.GenesisSeed.rand(seed);
     var u = S / 1000;
 
     var c = {

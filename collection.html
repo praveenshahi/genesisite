@@ -8,11 +8,15 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 </head>
 <body>
 <a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
@@ -30,6 +34,7 @@
     </nav>
   </div>
 </header>
+<div class="wrap running-head" aria-hidden="true"><span>The Founders Collection</span><span class="running-head__rule"></span><span>Folio V</span></div>
 
 <main id="main">
   <section class="wrap page-open">
@@ -42,10 +47,10 @@
     <!-- Only pieces whose owners opted in. Caption: title, date, engine. Never a rank. -->
     <div class="collection-grid">
       <figure class="g-art is-first" data-reveal>
-        <span class="g-art__frame"><img src="assets/endless-2620050a.jpg" width="1400" height="1400" alt="Endless artwork for Recognition 2620050a: dense pale-green, cyan and violet filaments forming a rotated square around a small central ring"></span>
-        <figcaption class="g-art__cap"><span class="g-art__title">The day I took the risk that changed my life</span>5 May 2025 · Endless</figcaption>
+        <span class="mat"><span class="g-art__frame"><img src="assets/endless-2620050a.jpg" width="1400" height="1400" alt="Endless artwork for Recognition 2620050a: dense pale-green, cyan and violet filaments forming a rotated square around a small central ring"></span></span>
+        <figcaption class="g-art__cap"><span class="plate">Plate I</span><span class="g-art__title">The day I took the risk that changed my life</span>5 May 2025 · Endless</figcaption>
       </figure>
-      <div class="collection-open" data-reveal style="--d: 200ms">
+      <div class="collection-open" data-stars="the open collection" data-reveal style="--d: 200ms">
         <p class="t-display-m">Pieces appear here as their owners choose to share them.</p>
         <p class="t-body-s" style="margin-top: var(--space-4)">Art only, or art and title. Never the story unless they say so.</p>
       </div>
@@ -76,6 +81,12 @@
         <a href="collection.html" aria-current="page">The Founders Collection</a>
         <a href="verify.html">Verify a recognition</a>
       </nav>
+    </div>
+    <div class="orule" aria-hidden="true"><span></span></div>
+    <div class="colophon">
+      <p class="colophon__head inscription">Colophon</p>
+      <p class="colophon__text">Set in Cormorant, Lora and Jost, with Tiro Devanagari for the Sanskrit. Every recognition is signed by Genesis, anchored to Bitcoin and stored on Arweave.</p>
+      <p class="colophon__year inscription">Anno MMXXVI</p>
     </div>
     <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
   </div>

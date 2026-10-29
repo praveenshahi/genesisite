@@ -19,6 +19,12 @@
   --art-cyan: #5FB4C9;
   --art-violet: #8C7FD6;
   --shadow-art: 0 24px 80px rgba(0, 0, 0, 0.6);
+  --rubric: #E2795A;
+  --lapis: #0C1630;
+  --lapis-line: #8FA6D9;
+  --seal-ink: #D4A657;
+  --glow-brass: rgba(212, 166, 87, 0.16);
+  --grain-opacity: 0.05;
 }
 [data-theme="vellum"] {
   --ground: #F6F1E7;
@@ -40,6 +46,12 @@
   --art-cyan: #5FB4C9;
   --art-violet: #8C7FD6;
   --shadow-art: 0 24px 60px rgba(20, 18, 16, 0.22);
+  --rubric: #A3391C;
+  --lapis: #1F3466;
+  --lapis-line: #1F3466;
+  --seal-ink: #A3391C;
+  --glow-brass: rgba(184, 138, 66, 0.18);
+  --grain-opacity: 0.09;
 }
 :root {
   --space-1: 4px;
@@ -63,6 +75,11 @@
   --font-serif: Lora, Georgia, "Times New Roman", serif;
   --font-label: Jost, "Futura", "Century Gothic", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-inscription: "Cormorant SC", "Cormorant Garamond", Georgia, serif;
+  --font-devanagari: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", serif;
+  --line-hair: 1px;
+  --line-fine: 0.75px;
+  --tick: 6px;
 }
 .turn { font-family: var(--font-display); font-size: 64px; line-height: 68px; font-weight: 300; letter-spacing: -0.01em; }
 .display-l { font-family: var(--font-display); font-size: 48px; line-height: 54px; font-weight: 400; }
@@ -75,4 +92,5 @@
 .eyebrow { font-family: var(--font-label); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.24em; }
 .button { font-family: var(--font-label); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.14em; }
 .caption { font-family: var(--font-label); font-size: 13px; line-height: 20px; font-weight: 400; letter-spacing: 0.02em; }
+.inscription { font-family: var(--font-inscription); font-size: 15px; line-height: 20px; font-weight: 500; letter-spacing: 0.18em; }
 .record { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }

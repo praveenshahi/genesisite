@@ -8,11 +8,15 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 </head>
 <body>
 <a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
@@ -35,17 +39,21 @@
 <main id="main">
 
   <!-- Screens 1 + 2 -->
-  <section class="wrap opening" aria-label="Opening">
-    <h1 class="t-hero" data-reveal style="--d: 200ms">You can tell anyone what you built.</h1>
-    <p class="opening__answer" data-reveal style="--d: 1400ms">Can you tell them who you became?</p>
-    <div class="opening__cue" aria-hidden="true" data-reveal style="--d: 2400ms"><span></span><span class="t-caption">Scroll slowly</span></div>
+  <section class="wrap opening opening--sky" aria-label="Opening">
+    <div class="opening__text">
+      <h1 class="t-hero" data-reveal style="--d: 200ms">You can tell anyone what you built.</h1>
+      <p class="opening__answer" data-reveal style="--d: 1400ms">Can you tell them who you became?</p>
+      <div class="opening__cue" aria-hidden="true" data-reveal style="--d: 2400ms"><span></span><span class="t-caption">Scroll slowly</span></div>
+    </div>
+    <div class="opening__instrument" data-reveal style="--d: 700ms"><div class="astrolabe" data-astrolabe></div></div>
   </section>
 
   <!-- Screen 3: turn one -->
   <section class="section--rule">
+    <span class="knot" aria-hidden="true"></span>
     <div class="wrap grid-12 turn">
       <div class="col-label turn__label" data-reveal>
-        <span class="t-numeral" aria-hidden="true">I</span>
+        <span class="t-numeral" aria-hidden="true">I</span><span class="numeral-limb" aria-hidden="true"></span>
         <span class="g-eyebrow">It begins with an ending</span>
       </div>
       <div class="col-main">
@@ -63,9 +71,10 @@
 
   <!-- Screens 5 + 6: turn two -->
   <section class="section--rule">
+    <span class="knot" aria-hidden="true"></span>
     <div class="wrap grid-12 turn">
       <div class="col-label turn__label" data-reveal>
-        <span class="t-numeral" aria-hidden="true">II</span>
+        <span class="t-numeral" aria-hidden="true">II</span><span class="numeral-limb" aria-hidden="true"></span>
         <span class="g-eyebrow">Only afterwards</span>
       </div>
       <div class="col-main">
@@ -83,9 +92,9 @@
       <span class="g-eyebrow" data-reveal>For thousands of years</span>
       <p class="t-display-l" style="max-width: 20ch; --d: 200ms" data-reveal>Transformation came with a rite, a mark and a witness.</p>
       <div class="marks">
-        <div data-reveal><h3>The rite</h3><p>A threshold you cross, so the change has a shape.</p></div>
-        <div data-reveal style="--d: 150ms"><h3>The mark</h3><p>A thread worn next to the skin. Something you keep.</p></div>
-        <div data-reveal style="--d: 300ms"><h3>The witness</h3><p>A teacher, a community, a chorus that saw it happen.</p></div>
+        <div data-reveal><svg class="glyph glyph--l" aria-hidden="true"><use href="#g-threshold"/></svg><h3>The rite</h3><p>A threshold you cross, so the change has a shape.</p></div>
+        <div data-reveal style="--d: 150ms"><svg class="glyph glyph--l" aria-hidden="true"><use href="#g-seed"/></svg><h3>The mark</h3><p>A thread worn next to the skin. Something you keep.</p></div>
+        <div data-reveal style="--d: 300ms"><svg class="glyph glyph--l" aria-hidden="true"><use href="#g-seal"/></svg><h3>The witness</h3><p>A teacher, a community, a chorus that saw it happen.</p></div>
       </div>
       <div class="insight-close" data-reveal>
         <p>Modern life kept the trophies and lost the marks.</p>
@@ -95,10 +104,11 @@
   </section>
 
   <!-- Screen 8: turn three -->
-  <section>
+  <section class="has-knot">
+    <span class="knot" aria-hidden="true"></span>
     <div class="wrap grid-12 turn">
       <div class="col-label turn__label" data-reveal>
-        <span class="t-numeral" aria-hidden="true">III</span>
+        <span class="t-numeral" aria-hidden="true">III</span><span class="numeral-limb" aria-hidden="true"></span>
         <span class="g-eyebrow">To know again</span>
       </div>
       <div class="col-main">
@@ -106,8 +116,8 @@
         <p class="word" data-reveal style="--d: 300ms">Recognition.</p>
         <p class="t-lede" style="margin-top: var(--space-5); --d: 600ms" data-reveal>To know again what was already true.</p>
         <div class="word-pair" data-reveal>
-          <div><span class="w" lang="la">re-cognoscere</span><span class="l">Latin</span></div>
-          <div><span class="w" lang="sa-Latn">pratyabhijñā</span><span class="l">Sanskrit</span></div>
+          <div><span class="w-carved" lang="la" aria-hidden="true">RE·COGNOSCERE</span><span class="w" lang="la">re-cognoscere</span><span class="l">Latin</span></div>
+          <div><span class="w-deva deva" lang="sa">प्रत्यभिज्ञा</span><span class="w" lang="sa-Latn">pratyabhijñā</span><span class="l">Sanskrit</span></div>
         </div>
         <div class="turn__deeper" data-reveal><a class="g-btn g-btn--link" href="deeper.html#one-word">Two traditions, one word</a></div>
       </div>
@@ -117,7 +127,7 @@
   <!-- Screen 9: the handoff -->
   <section class="section--rule">
     <div class="wrap handoff">
-      <img src="assets/genesis-emblem-light.png" alt="" data-reveal>
+      <div class="orbit" data-reveal aria-hidden="true"><span class="orbit__arm"></span><img src="assets/genesis-emblem-light.png" alt=""></div>
       <h2 class="t-turn" data-reveal style="--d: 200ms">Only you can name yours.</h2>
       <div data-reveal style="--d: 500ms">
         <a class="g-btn g-btn--primary" href="begin.html">Find your moment</a>
@@ -130,7 +140,7 @@
   <section class="section--surface section--tall">
     <div class="wrap split">
       <figure class="g-art" data-reveal>
-        <span class="g-art__frame"><img src="assets/endless-2620050a.jpg" width="1400" height="1400" loading="lazy" alt="Endless artwork for Recognition 2620050a: dense pale-green, cyan and violet filaments forming a rotated square around a small central ring"></span>
+        <span class="mat"><span class="g-art__frame"><img src="assets/endless-2620050a.jpg" width="1400" height="1400" loading="lazy" alt="Endless artwork for Recognition 2620050a: dense pale-green, cyan and violet filaments forming a rotated square around a small central ring"></span></span>
         <figcaption class="g-art__cap"><span class="g-art__title">The day I took the risk that changed my life</span>5 May 2025 · Endless · Open Collection</figcaption>
       </figure>
       <div class="stack" style="--stack: var(--space-6)">
@@ -180,6 +190,12 @@
         <a href="collection.html">The Founders Collection</a>
         <a href="verify.html">Verify a recognition</a>
       </nav>
+    </div>
+    <div class="orule" aria-hidden="true"><span></span></div>
+    <div class="colophon">
+      <p class="colophon__head inscription">Colophon</p>
+      <p class="colophon__text">Set in Cormorant, Lora and Jost, with Tiro Devanagari for the Sanskrit. Every recognition is signed by Genesis, anchored to Bitcoin and stored on Arweave.</p>
+      <p class="colophon__year inscription">Anno MMXXVI</p>
     </div>
     <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
   </div>

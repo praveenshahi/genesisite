@@ -8,11 +8,15 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 </head>
 <body>
 <a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
@@ -30,6 +34,7 @@
     </nav>
   </div>
 </header>
+<div class="wrap running-head" aria-hidden="true"><span>Manifesto</span><span class="running-head__rule"></span><span>Folio I</span></div>
 
 <main id="main" class="wrap section">
   <article class="manifesto">
@@ -37,14 +42,25 @@
     <h1 class="t-display-l" data-reveal style="--d: 150ms">The world sees what you built. Few ever see who you became.</h1>
     <hr class="g-rule" data-reveal style="--d: 300ms">
 
-    <div class="prose">
-      <p data-reveal>Every transformation begins with something ending. Then comes the heat, the doubt, the stretch where you're no longer who you were and not yet who you'd be. You only see it afterwards, and by then, no one thinks to ask.</p>
-      <p data-reveal>For thousands of years, people marked these crossings with a rite, a mark and a witness. A second birth was marked with a thread worn next to the skin. A community stood witness.</p>
-      <p data-reveal>Modern life kept the trophies — the rings, the diplomas, the medals — and lost the marks for the change inside.</p>
+    <div class="prose folio">
+      <div class="folio__row">
+        <p class="has-initial" data-reveal>Every transformation begins with something ending.<sup class="ref" aria-hidden="true">a</sup> Then comes the heat, the doubt, the stretch where you're no longer who you were and not yet who you'd be. You only see it afterwards, and by then, no one thinks to ask.</p>
+        <aside class="sidenote" data-reveal><span class="ref">a</span>Every transition starts with letting go. <a href="deeper.html#ending">Go deeper, II</a></aside>
+      </div>
+      <div class="folio__row">
+        <p data-reveal>For thousands of years, people marked these crossings with a rite, a mark and a witness. A second birth was marked with a thread worn next to the skin.<sup class="ref" aria-hidden="true">b</sup> A community stood witness.</p>
+        <aside class="sidenote" data-reveal><span class="ref">b</span>The sacred thread of the twice-born. <a href="deeper.html#civilisation">Go deeper, I</a></aside>
+      </div>
+      <div class="folio__row">
+        <p data-reveal>Modern life kept the trophies — the rings, the diplomas, the medals — and lost the marks for the change inside.<sup class="ref" aria-hidden="true">c</sup></p>
+        <aside class="sidenote" data-reveal><span class="ref">c</span>Rites we now choose alone, and rarely mark. <a href="deeper.html#civilisation">Go deeper, I</a></aside>
+      </div>
       <p class="turnline" data-reveal>We're bringing them back.</p>
     </div>
 
-    <section class="section" aria-labelledby="believe" style="padding-bottom: 0">
+    <div class="orule" aria-hidden="true"><span></span></div>
+
+    <section aria-labelledby="believe">
       <h2 id="believe" class="g-eyebrow" data-reveal>What we believe</h2>
       <ol class="beliefs">
         <li data-reveal>Every transformation begins with an ending.</li>
@@ -62,9 +78,12 @@
     </div>
 
     <div class="signoff" data-reveal>
-      <div>
+      <div class="signoff__mark">
+        <div data-seal="the-genesis-manifesto" data-seal-size="small"></div>
+        <div>
         <p class="wordmark" style="font-size: 20px; letter-spacing: 0.3em; text-transform: uppercase;">The Genesis</p>
         <p class="t-lede" style="margin-top: var(--space-1)">Transformation, recognised.</p>
+        </div>
       </div>
       <a class="g-btn g-btn--primary" href="begin.html">Find your moment</a>
     </div>
@@ -79,11 +98,17 @@
         <p class="site-foot__sig">Transformation, recognised.</p>
       </div>
       <nav class="site-foot__nav" aria-label="Footer">
-        <a href="manifesto.html">Manifesto</a>
+        <a href="manifesto.html" aria-current="page">Manifesto</a>
         <a href="deeper.html">Go deeper</a>
         <a href="collection.html">The Founders Collection</a>
         <a href="verify.html">Verify a recognition</a>
       </nav>
+    </div>
+    <div class="orule" aria-hidden="true"><span></span></div>
+    <div class="colophon">
+      <p class="colophon__head inscription">Colophon</p>
+      <p class="colophon__text">Set in Cormorant, Lora and Jost, with Tiro Devanagari for the Sanskrit. Every recognition is signed by Genesis, anchored to Bitcoin and stored on Arweave.</p>
+      <p class="colophon__year inscription">Anno MMXXVI</p>
     </div>
     <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
   </div>

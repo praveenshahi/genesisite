@@ -8,11 +8,15 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 </head>
 <body>
 <a class="skip g-btn g-btn--quiet" href="#main">Skip to content</a>
@@ -30,6 +34,7 @@
     </nav>
   </div>
 </header>
+<div class="wrap running-head" aria-hidden="true"><span>The witness</span><span class="running-head__rule"></span><span>Folio IV</span></div>
 
 <main id="main">
   <section class="wrap page-open">
@@ -39,7 +44,7 @@
   </section>
 
   <section class="wrap" style="padding-bottom: var(--space-10)">
-    <div class="does" data-reveal>
+    <div class="does does--tablet" data-reveal>
       <div><h2>What it does</h2><p>It records that on this date you declared this transformation, in these words, and that nothing has changed since.</p></div>
       <div><h2>What it doesn't do</h2><p>It doesn't verify your story, interpret it or judge it. That's what a witness is for.</p></div>
     </div>
@@ -50,28 +55,28 @@
       <h2 class="t-display-l" style="max-width: 18ch; margin-bottom: var(--space-8)" data-reveal>Four parts, each in plain words.</h2>
       <div class="proofs">
         <div class="proof" data-reveal>
-          <div class="proof__name"><span class="g-wstatus__item">Signed</span><span class="g-wstatus__sub">Ed25519</span></div>
+          <div class="proof__name"><div data-seal="witness-signed" data-seal-size="small" aria-hidden="true"></div><span class="g-wstatus__item">Signed</span><span class="g-wstatus__sub">Ed25519</span></div>
           <div>
             <p class="proof__plain">Genesis signs your record with its public key.</p>
             <dl class="proof__facts"><div><dt>What it proves</dt><dd>The record was issued by Genesis and hasn't been altered.</dd></div><div><dt>What it doesn't</dt><dd>That the story is true.</dd></div></dl>
           </div>
         </div>
         <div class="proof" data-reveal>
-          <div class="proof__name"><span class="g-wstatus__item">Anchored</span><span class="g-wstatus__sub">Bitcoin · OpenTimestamps</span></div>
+          <div class="proof__name"><div data-seal="witness-anchored" data-seal-size="small" aria-hidden="true"></div><span class="g-wstatus__item">Anchored</span><span class="g-wstatus__sub">Bitcoin · OpenTimestamps</span></div>
           <div>
             <p class="proof__plain">A fingerprint of your record is anchored to the Bitcoin blockchain with OpenTimestamps.</p>
             <dl class="proof__facts"><div><dt>What it proves</dt><dd>The record existed by that point in time.</dd></div><div><dt>What it doesn't</dt><dd>That the event happened on that date.</dd></div></dl>
           </div>
         </div>
         <div class="proof" data-reveal>
-          <div class="proof__name"><span class="g-wstatus__item">Stored</span><span class="g-wstatus__sub">Arweave</span></div>
+          <div class="proof__name"><div data-seal="witness-stored" data-seal-size="small" aria-hidden="true"></div><span class="g-wstatus__item">Stored</span><span class="g-wstatus__sub">Arweave</span></div>
           <div>
             <p class="proof__plain">Your record, public story and image are stored on Arweave, each at a public address.</p>
             <dl class="proof__facts"><div><dt>What it proves</dt><dd>Each stored item is retrievable at its address.</dd></div><div><dt>What it doesn't</dt><dd>Availability of every file forever; check each one.</dd></div></dl>
           </div>
         </div>
         <div class="proof" data-reveal>
-          <div class="proof__name"><span class="g-wstatus__item">Private</span><span class="g-wstatus__sub">AES-256-GCM</span></div>
+          <div class="proof__name"><div data-seal="witness-private" data-seal-size="small" aria-hidden="true"></div><span class="g-wstatus__item">Private</span><span class="g-wstatus__sub">AES-256-GCM</span></div>
           <div>
             <p class="proof__plain">A private story is encrypted in your browser.</p>
             <dl class="proof__facts"><div><dt>What it proves</dt><dd>Only the key-holder can read it.</dd></div><div><dt>What it doesn't</dt><dd>Recovery: we can't restore a lost key.</dd></div></dl>
@@ -105,6 +110,12 @@
         <a href="collection.html">The Founders Collection</a>
         <a href="verify.html">Verify a recognition</a>
       </nav>
+    </div>
+    <div class="orule" aria-hidden="true"><span></span></div>
+    <div class="colophon">
+      <p class="colophon__head inscription">Colophon</p>
+      <p class="colophon__text">Set in Cormorant, Lora and Jost, with Tiro Devanagari for the Sanskrit. Every recognition is signed by Genesis, anchored to Bitcoin and stored on Arweave.</p>
+      <p class="colophon__year inscription">Anno MMXXVI</p>
     </div>
     <p class="site-foot__legal">© 2026 Genesis Art Tech, Inc.</p>
   </div>

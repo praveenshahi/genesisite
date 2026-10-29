@@ -8,6 +8,7 @@
   --fs-display-l: clamp(34px, 4vw, 56px);
   --fs-display-m: clamp(26px, 2.8vw, 38px);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-ink: cubic-bezier(0.65, 0.05, 0.36, 1);
   --fade: 800ms;
   --scene: 600ms;
 }
@@ -295,12 +296,14 @@ p { text-wrap: pretty; }
 @media (max-width: 900px) { .verify-head, .verify-body { grid-template-columns: minmax(0, 1fr); gap: var(--space-7); } }
 
 /* ---------- Reveal on scroll ---------- */
-.js [data-reveal] { opacity: 0; transform: translateY(10px); filter: blur(4px); transition: opacity var(--fade) var(--ease-out), transform var(--fade) var(--ease-out), filter var(--fade) var(--ease-out); transition-delay: var(--d, 0ms); }
-.js [data-reveal].is-in { opacity: 1; transform: none; filter: none; }
-.js .opening [data-reveal] { transition-duration: 1200ms; }
+/* Ink: text is written in from left to right, sharpening from a slight blur. Everything else settles in. */
+.js [data-reveal] { opacity: 0; filter: blur(5px); transition: opacity var(--fade) var(--ease-out), filter var(--fade) var(--ease-out), clip-path 1500ms var(--ease-ink); transition-delay: var(--d, 0ms); }
+.js :is(h1, h2, h3, p, .g-eyebrow)[data-reveal] { clip-path: inset(-0.4em 100% -0.4em -0.2em); }
+.js [data-reveal].is-in { opacity: 1; filter: none; clip-path: inset(-0.4em -0.4em -0.4em -0.2em); }
+.js .opening [data-reveal] { transition-duration: 1200ms, 1200ms, 1900ms; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js [data-reveal] { opacity: 1; transform: none; filter: none; }
+  .js [data-reveal] { opacity: 1; transform: none; filter: none; clip-path: none; }
   .thread { display: none !important; }
 }

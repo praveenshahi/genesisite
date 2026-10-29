@@ -8,12 +8,16 @@
 <link rel="icon" href="assets/genesis-emblem-brass.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Cormorant+SC:wght@400;500&amp;family=Tiro+Devanagari+Sanskrit&amp;family=IBM+Plex+Mono:wght@400&amp;family=Jost:wght@400;500&amp;family=Lora:ital,wght@0,400;1,400&amp;display=swap">
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/ornament.css">
 <link rel="stylesheet" href="styles/finder.css">
 <script src="scripts/site.js" defer></script>
+<script src="scripts/seed.js" defer></script>
+<script src="scripts/sky.js" defer></script>
+<script src="scripts/seal.js" defer></script>
 <script src="scripts/endless-sketch.js" defer></script>
 <script src="scripts/finder.js" defer></script>
 </head>
@@ -30,6 +34,7 @@
 
     <!-- 0. Threshold -->
     <section class="screen" data-screen="threshold" data-ground="night">
+      <div class="threshold-instrument astrolabe" data-astrolabe aria-hidden="true"></div>
       <h1 class="t-turn screen__title" tabindex="-1">This isn't about what you built. It's about who you became.</h1>
       <div class="screen__actions">
         <button type="button" class="g-btn g-btn--primary" data-next>Begin</button>
@@ -90,6 +95,13 @@
       <h2 class="t-display-m screen__title" tabindex="-1">The day the old form ended.</h2>
       <div class="field screen__field"><label for="ended-on">The day it ended</label><input id="ended-on" name="ended-on" type="date" required></div>
       <p class="field__hint">Your closest guess is fine. This date seeds your artwork.</p>
+      <div class="moon" hidden>
+        <svg class="moon__svg" viewBox="-32 -32 64 64" aria-hidden="true"><circle r="28" class="moon__rim"/><path class="moon__lit" d=""/></svg>
+        <div>
+          <p class="moon__text" aria-live="polite"></p>
+          <p class="moon__date"></p>
+        </div>
+      </div>
       <div class="screen__actions"><button type="button" class="g-btn g-btn--primary" data-next disabled>Continue</button><button type="button" class="g-btn g-btn--link screen__back" data-back>Back</button></div>
     </section>
 
@@ -117,14 +129,20 @@
 
     <!-- 7. The pause -->
     <section class="screen screen--pause" data-screen="pause" data-ground="night" hidden aria-live="polite">
-      <div class="pause-line" aria-hidden="true"></div>
+      <svg class="pause-instrument" viewBox="-130 -130 260 140" aria-hidden="true">
+        <path class="pause-arc" d="M-120 0 A120 120 0 0 1 120 0"/>
+        <path class="pause-ticks" d=""/>
+        <line class="pause-horizon" x1="-128" y1="0" x2="128" y2="0"/>
+        <g class="pause-alidade"><line x1="0" y1="0" x2="0" y2="-124"/><circle cx="0" cy="-124" r="2.5"/></g>
+        <circle class="pause-hub" r="3.5"/>
+      </svg>
       <p class="t-caption pause-word">Recognising.</p>
     </section>
 
     <!-- 8. The reveal -->
     <section class="screen screen--reveal" data-screen="reveal" data-ground="night" hidden>
       <figure class="g-art reveal-art">
-        <span class="g-art__frame"><canvas id="sketch" role="img" aria-label="An artwork drawn from your answers: fine filaments in pale green, cyan and violet folding into a rotated square around a small central ring, on a dark ground."></canvas></span>
+        <span class="mat"><span class="g-art__frame"><canvas id="sketch" role="img" aria-label="An artwork drawn from your answers: fine filaments in pale green, cyan and violet folding into a rotated square around a small central ring, on a dark ground."></canvas></span></span>
       </figure>
       <div class="reveal-text">
         <h2 class="t-display-l screen__title" tabindex="-1" data-out="title"></h2>
@@ -157,7 +175,10 @@
 
     <!-- 10. Recognised. -->
     <section class="screen screen--done" data-screen="done" data-ground="night" hidden>
-      <figure class="g-art done-art"><span class="g-art__frame"><canvas id="done-sketch" aria-hidden="true"></canvas></span></figure>
+      <div class="done-plate">
+        <figure class="g-art done-art"><span class="g-art__frame"><canvas id="done-sketch" aria-hidden="true"></canvas></span></figure>
+        <div class="done-seal" id="done-seal"></div>
+      </div>
       <h2 class="t-hero screen__title" tabindex="-1">Recognised.</h2>
       <p class="done-title" data-out="title"></p>
       <p class="reveal-date" data-out="date"></p>
